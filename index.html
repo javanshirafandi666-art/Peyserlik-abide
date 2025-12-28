@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<title>Peyserliyin Vikipediyası</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#0f0f0f;color:#fff;text-align:center}
+.page{display:none;padding:20px}
+.page.active{display:block}
+button{padding:12px 25px;font-size:16px;border:none;border-radius:6px;margin:10px;cursor:pointer}
+.yes{background:#28a745;color:white}
+.no{background:#dc3545;color:white}
+.card{background:#1c1c1c;margin:20px auto;padding:15px;border-radius:10px;max-width:420px}
+.card img{width:100%;border-radius:10px}
+.name{font-size:20px;font-weight:bold;margin-top:10px}
+.desc{font-size:14px;margin-top:8px;line-height:1.5}
+a{color:#25D366;text-decoration:none;font-weight:bold}
+</style>
+</head>
+<body>
+
+<div class="page active" id="page1">
+<h2>Peyserlərin Vikipediyasına daxil olursunuz</h2>
+<p>Hazırsınız?</p>
+<button class="yes" onclick="go(2)">Evet</button>
+<button class="no" onclick="window.close()">Hayır</button>
+</div>
+
+<div class="page" id="page2">
+<p>
+Peyserlik hardasa 1900-cü illərdən başlamışdır.
+Sonralarsa bu sənət ölkəmizdə və digər ölkələrdə geniş yayılmışdır.
+Peyserlik sənəti ilk baxışda adi bir şey kimi görünsə də dərin bir məna daşıyır.
+Peyser olmaq xəstəlik deyil – vərdişdir.
+İndi sizə nümunələr göstərək.
+</p>
+<button class="yes" onclick="go(3)">Numunelere bax</button>
+</div>
+
+<div class="page" id="page3">
+
+<div class="card">
+<img src="foto1.jpg">
+<div class="name">Yusif Memmedov</div>
+<div class="desc">
+Hal-hazırda gördüyünüz şəxs Yusifdir, o 5 ildir ki peyserliklə məşğuldur.
+İlk peyserliyi 10 yaşında etmişdir. Hal-hazırda ölkənin ilk 10 peyser kateqoriyasında 1-cidir.
+</div>
+</div>
+
+<div class="card">
+<img src="foto2.jpg">
+<div class="name">Elcan Cabbarov</div>
+<div class="desc">
+Gördüyünüz şəxs Elcandır. O peyser olduğunu qəbul etməsə də,
+gedişatı bunun əksini göstərir. Dalbadal 40 dəfə yalanla and içə bilir.
+</div>
+</div>
+
+<div class="card">
+<img src="foto3.jpg">
+<div class="name">Elekber Petito</div>
+<div class="desc">
+Bu şəxs peyserliyi bir sənət halına daşıyan Elekberdir.
+Peyser olduğunu qəbul edir və bunun həyatında böyük rol oynadığını bildirir.
+</div>
+</div>
+
+<br>
+<a href="son.html">Son sözü oxu</a>
+
+</div>
+
+<script>
+function go(n){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById('page'+n).classList.add('active');
+}
+</script>
+
+</body>
+</html>
